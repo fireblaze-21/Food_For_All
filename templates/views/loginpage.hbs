@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login From</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/loginstyle.css">
+  </head>
+  <body >
+    <div class="main">
+    <div class="Donor" >
+    <div class="login_form_container">
+      <form class="form" action="/donor/login" method="post" novalidate>
+        <div class="login_form">
+          <h2>Donor Login </h2>
+          <div class="input_group">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="Username" class="input_text" name="email" required>
+          </div>
+          <div class="input_group">
+            <i class="fa fa-unlock-alt"></i>
+            <input type="password" placeholder="Password" class="input_text" autocomplete="off" name="password" required>
+          </div>
+          <div class="button_group" id="login_button">
+            <input type="submit" value="Log in">
+          </div>
+          <div class="fotter">
+            <a>Forgot Password ?</a>
+          <a href="/donor/registration">SingUp</a>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+  <div class="Donor" style="opacity: 0.8;">
+    <div class="login_form_container">
+      <form class="form" action="/NGO/login" method="post" novalidate>
+        <div class="login_form">
+          <h2>Organization Login</h2>
+          <div class="input_group">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="Username" class="input_text" name="email" required>
+          </div>
+          <div class="input_group">
+            <i class="fa fa-unlock-alt"></i>
+            <input type="password" placeholder="Password" class="input_text" autocomplete="off" name="password" required>
+          </div>
+          <div class="button_group" id="login_button">
+            <input type="submit" value="Login">
+          </div>
+          <div class="fotter">
+            <a>Forgot Password ?</a>
+          <a href="/NGO/registration">SingUp</a>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

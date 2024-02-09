@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+
+    <!--- My CSS Link-->
+    <link rel="stylesheet" href="/css/signinstyle.css">
+</head>
+
+<body>
+
+    <main>
+        <section class="learn">
+            <h1>Welcome to our Donor Registration page!</h1>
+            <p>By joining our esteemed donor community, you are taking a powerful step towards making a difference in
+                the lives of those who need it most.</p>
+        </section>
+        <section>
+
+            <div class="sign-up">
+                <form action="/donor/registration" class="signup-form" data-netlify="true" method="post"
+                    onsubmit="return validation()">
+                    <div class="form-btn">
+                        <input type="text" placeholder="First Name" name="firstName" id="first-name" required>
+                        <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                        <p class="msg">First Name cannot be empty</p>
+                        {{#if (isdefined err.errors.firstName)}}
+                        <p class="msg">err.errors.firstName.message</p>
+                        {{/if}}
+                    </div>
+
+                    <div class="form-btn">
+                        <input type="text" placeholder="Last Name" name="lastName" id="last-name" required>
+                        <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                        <p class="msg">Last Name cannot be empty</p>
+                        {{#if (isdefined err.errors.lastName)}}
+                        <p class="msg">err.errors.lastName.message</p>
+                        {{/if}}
+                    </div>
+
+                    <div class="form-btn">
+                        <input type="email" placeholder="Email Address" id="email" name="email" required>
+                        <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                        <p class="msg">Looks like this is not an email</p>
+                        {{#if (isdefined err.errors.email)}}
+                        <p class="msg">err.errors.email.message</p>
+                        {{/if}}
+                    </div>
+                    <div class="form-btn">
+                        <input type="mobile" placeholder="Contact No" name="phone" id="number" required>
+                        <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                        <p class="msg">Looks like this is not an valid number</p>
+                        {{#if (isdefined err.errors.phone)}}
+                        <p class="msg">err.errors.phone.message</p>
+                        {{/if}}
+                    </div>
+                    <div class="form-btn">
+                        <input type="text" placeholder="Address" name="address" id="address">
+                        <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                        <p class="msg">Looks like this is not an address</p>
+                        {{#if (isdefined err.errors.address)}}
+                        <p class="msg">err.errors.address.message</p>
+                        {{/if}}
+                    </div>
+                    <div class="form-btn">
+                        <input type="text" placeholder="city" name="city" id="city" required>
+                        <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                        <p class="msg">Looks like this is not an city</p>
+                        {{#if (isdefined err.errors.city)}}
+                        <p class="msg">err.errors.city.message</p>
+                        {{/if}}
+                    </div>
+                    <div class="form-btn">
+                        <input type="text" placeholder="state" name="state" id="state" required>
+                        <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                        <p class="msg">Looks like this is not an state</p>
+                        {{#if (isdefined err.errors.state)}}
+                        <p class="msg">err.errors.state.message</p>
+                        {{/if}}
+                    </div>
+                    <div class="form-btn">
+                        <input type="text" placeholder="profession" name="profession" id="profession">
+                        <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                        <p class="msg">Looks like this is not an profession</p>
+                        {{#if (isdefined err.errors.profession)}}
+                        <p class="msg">err.errors.profession.message</p>
+                        {{/if}}
+                    </div>
+                    <div class="form-btn">
+                        <input type="password" placeholder="Password" id="password" name="password" required>
+                        <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                        <p class="msg">Password should Strong</p>
+                        {{#if (isdefined err.errors.password)}}
+                        <p class="msg">err.errors.password.message</p>
+                        {{/if}}
+                    </div>
+                    <div class="form-btn">
+                        <input type="password" placeholder="Confirm Password" id="password_again" name="cpassword" required>
+                        <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                        <p class="msg">Password doesnot match</p>
+                        {{#if (isdefined err)}}
+                        <p class="msg">err.message</p>
+                        {{/if}}
+                    </div>
+                    <input id="submit-btn" type="submit" value="sign in">
+
+                    <p class="terms">By clicking the button, you are agreeing to our <span><a href="#">Terms and
+                                Services</a></span></p>
+                </form>
+        </section>
+    </main>
+
+</body>
+<script src="/js/signjavascript.js"></script>
+
+</html>

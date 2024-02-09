@@ -1,0 +1,422 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* box-sizing: border-box; */
+}
+body{
+    /* background-color: rgb(104, 98, 98); */
+    background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.6)) , url('https://annamrita.org/wp-content/uploads/2021/12/our-goals-mob.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+/* 
+/* ***************** headline and logo *************** */
+.content{
+    /* background-color: rgb(104, 98, 98); */
+    width: 100%;
+    display: flex;
+}
+ .first{
+    margin-left: 4%;
+    padding: 6% 0%;
+    width: 60%;
+    color: white;
+  }
+  @media only screen and (max-width : 900px ) {
+    .first{
+      margin-left: 0%;
+      padding: 7% 0%;
+      width: 60%;
+      color: white;
+    }
+  }
+.ih{
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+.nam{
+    margin:0px auto ;
+    padding-bottom: 20px;
+    text-align: center;
+    padding-left: 0%; 
+
+    /* background-color: blue; */
+}
+.logoo{
+    width : 120px;
+    height: 120px;
+    border-radius: 50%;
+    /* background-color: #a93c3c; */
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.shadow{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman';
+}
+.abouts{
+    margin: 5% 0%;
+}
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    
+}
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}
+.content .cn a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+
+.cn:hover{
+    background-color: #fff;
+}
+
+.content span{
+    color: rgb(1, 99, 1);
+    font-size: 1.2rem;
+}
+.details{
+    margin-top: 12%;
+    width: 260px;
+    height: 380px;
+    background: linear-gradient(to top, rgba(56, 60, 56, 0.8)50%,rgba(66, 70, 65, 0.8)50%);
+    /* position: absolute; */
+    top: -20px;
+    margin-top: 15%;
+    margin-right: 4%;
+    /* left: 870px; */
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 25px;
+    margin-left: 8%;
+}
+.details li{
+  color: white;
+}
+.details h2{
+    width: 100%;
+    font-family: sans-serif;
+    text-align: center;
+    color:rgb(1, 99, 1);
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+.dat{
+   
+        margin-top: 10%;
+        font-size:1.3rem;
+        line-height: 3rem;
+    
+}
+
+.circle-conta{
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  /* text-align: center; */
+  background-color:rgb(106, 170, 9);
+   border-radius: 50%;
+   top: 70%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   /* color: aqua; */
+}
+
+#circle {
+  position: absolute;
+}
+
+#percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+}
+/* ************* Recent Work************ */
+.about{
+    width: 100%;
+    display: flex;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.6)) , url('donation.png'); */
+    z-index: -200; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* About image */
+.about .imgcontanner{
+    width: 30%;
+    position: relative;
+    
+}
+.about .imgcontanner .aboutimg {
+    position: absolute;
+    /* background: url('/images/child.jpg'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+    /* top: 80px; */
+    left: 32%;
+}
+
+/* about content */
+.about .aboutcontent {
+    width: 70%;
+    padding: 50px 5% 50px 7%;
+    color: white;
+    background-color: rgb(1, 99, 1);
+    margin-right: 6%;
+}
+.aboutcontent h5 {
+    letter-spacing: 2px;
+    /* font-weight: 600; */
+    /* margin-bottom: 10px; */
+}
+.aboutcontent h1 {
+    font-weight: 600;
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+.aboutcontent p {
+    padding-bottom: 5px;
+    line-height: 25px;
+}
+
+/* donate button  */
+
+@media only screen and (max-width : 796px ) {
+
+    /* *******************************   About us  **************************************** */
+    .details ul{
+      list-style-type: none;
+    }
+    .content{
+      padding: 6% 2%;
+    }
+    .about{
+        width: 100%;
+        display: block;
+        /* background-color:rgb(104, 98, 98); */
+        padding-top: 0px;
+
+    }
+    /* About image */
+    .about .imgcontanner{
+        width: 100%;
+        padding:3%;
+        padding-bottom: 50px;
+        box-sizing: border-box;
+
+    }
+    .about .imgcontanner .aboutimg {
+        position:relative;
+        width: 100%;
+        height: 450px;
+        top: 0px;
+       
+        display: none;
+    }
+
+    /* about content */
+    .about .aboutcontent {
+        width: 100%;
+        padding: 65px 4%;
+        box-sizing: border-box;
+    }
+    .aboutcontent h5 {
+        margin-bottom: 10px;
+    }
+    .aboutcontent h1 {
+        font-size: 30px;
+    }
+    .first{
+        width: 100%;
+    }
+    .content{
+        display: block;
+        align-items: center;
+    }
+    .details{
+        margin-top: 12%;
+        width: 270px;
+        height: 380px;
+        background: linear-gradient(to top, rgba(91, 85, 85, 0.8)50%,rgba(79, 77, 77, 0.8)50%);
+        /* position: absolute; */
+        top: -20px;
+        /* left: 870px; */
+        transform: translate(0%,-5%);
+        border-radius: 10px;
+        margin-left: 15%;
+    }
+}
+/* 
+
+/* ******************* Footer ********************* */
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:796px)
+{
+  .site-footer
+  {
+    padding-bottom:0px;
+    /* width:110%; */
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+  .details{
+    width: 60%;
+    align-items: center;
+    text-align: center;
+  }
+}
+/* ******************* slider ******************** */
+.main{
+  z-index: 999;
+  margin: 5% auto;
+  width: 800px;
+  overflow: hidden;
+}
+.names{
+display: none;  
+visibility: hidden;
+}
+.slider{
+  width: 800px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.5s ease-in-out;
+}
+.slider img{
+  width: 50%;
+  flex: none;
+}
+@media (max-width:900px)
+{
+  .main{
+    width: 400px;
+  }
+  .slider{
+    height: 400px;
+    width: 400px;
+  }
+  .slider img{
+    width: 100%;
+  }
+}
+@media (max-width:400px)
+{
+  .main{
+    width: 300px;
+  }
+  .slider{
+    height: 300px;
+    width: 300px;
+  }
+  .slider img{
+    width: 100%;
+  }
+}

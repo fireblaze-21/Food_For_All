@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Edit Profile</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/NGOprofile.css">
+	<link rel="stylesheet" type="text/css" href="/css/navbar.css">
+</head>
+
+<body>
+	{{>navbar}}
+	<section class="py-5 my-5">
+		<div class="container">
+			<h1 class="mb-5" >Account Settings</h1>
+			<div class="bg-white shadow rounded-lg d-block d-sm-flex">
+				<div class="profile-tab-nav border-right">
+					<div class="p-4">
+						<div class="img-circle text-center mb-3">
+							<img src="/uploads/{{logo}}" alt="Image" class="shadow">
+						</div>
+						<h4 class="text-center">{{name}}</h4>
+					</div>
+					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<a class="nav-link active" id="profile-tab" data-toggle="pill" href="#profile" role="tab"
+							aria-controls="profile" aria-selected="true">
+							<i class="fa fa-home text-center mr-1"></i>
+							Profile
+						</a>
+						<a class="nav-link" id="password-tab" data-toggle="pill" href="#password" role="tab"
+							aria-controls="password" aria-selected="false">
+							<i class="fa fa-key text-center mr-1"></i>
+							Password
+						</a>
+						<a class="nav-link" id="Account-tab" data-toggle="pill" href="#account" role="tab"
+							aria-controls="password" aria-selected="false">
+							<i class="fa fa-bank text-center mr-1"></i>
+							Bank Account
+						</a>
+						<a class="nav-link" id="images-tab" data-toggle="pill" href="#images" role="tab"
+							aria-controls="images" aria-selected="false">
+							<i class="fa fa-image text-center mr-1"></i>
+							Recent Activities
+						</a>
+						<a class="nav-link" id="payments-tab" data-toggle="pill" href="#payments" role="tab"
+							aria-controls="payments" aria-selected="false">
+							<i class="fa fa-money text-center mr-1"></i>
+							Payment History
+						</a>
+					</div>
+				</div>
+				<div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
+					<div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+						<h3 class="mb-4">Profile Settings</h3>
+						<form class="form" action="/NGO/profile" method="POST">
+							<div class="row">
+
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Organisation Name</label>
+										<input type="text" name="name" class="form-control" value="{{name}}">
+									</div>
+								</div>
+								<!-- <div class="col-md-6">
+								<div class="form-group">
+								  	<label>Last Name</label>
+								  	<input type="text" class="form-control" value="Mondal">
+								</div>
+							</div> -->
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Email</label>
+										<input type="text" name="email" class="form-control" value="{{email}}" disabled>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Phone number</label>
+										<input type="text" name="phone" class="form-control" value="{{phone}}">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>ID</label>
+										<input type="text" name="govId" class="form-control" value="{{govId}}" disabled>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Established</label>
+										<input type="number" name="estd" class="form-control" value="{{estd}}">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Address</label>
+										<input type="text" name="address" class="form-control" value="{{address}}">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>City</label>
+										<input type="text" name="city" class="form-control" value="{{city}}">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>State</label>
+										<input type="text" name="state" class="form-control" value="{{state}}">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Amount raised till now</label>
+										<input type="number" name="fund" class="form-control" value="{{fund}}" disabled>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Target Amount</label>
+										<input type="text" name="goal" class="form-control" value="{{goal}}" disabled>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>About</label>
+										<textarea class="form-control" name="description" rows="4">{{description}}</textarea>
+									</div>
+								</div>
+							</div>
+							<div>
+								<button type="submit" class="btn btn-primary" onclick="openpopup()">Update</button>
+								<button type="reset" class="btn btn-light">Cancel</button>
+							</div>
+						</form>
+
+					</div>
+					<div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+						<h3 class="mb-4">Password Settings</h3>
+						<form class="form" action="/NGO/password" method="POST">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Old password</label>
+										<input type="password" name="opassword" class="form-control">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>New password</label>
+										<input type="password" name="password" class="form-control">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Confirm new password</label>
+										<input type="password" name="cpassword" class="form-control">
+									</div>
+								</div>
+							</div>
+							<div>
+								<button type="submit" class="btn btn-primary">Update</button>
+								<button type="reset" class="btn btn-light">Cancel</button>
+							</div>
+						</form>
+					</div>
+					<div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-tab">
+						<h3 class="mb-4">Upload QR for payment </h3>
+						<form class="form" action="/NGO/bank" method="POST" enctype="multipart/form-data">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="containers">
+										<input type="file" id="file" name="qr" accept="image/*">
+										<div class="img-area" data-img="">
+											<i class='bx bxs-cloud-upload icon'></i>
+											<h3>Upload Image</h3>
+											<p>Image size must be less than <span>1MB</span></p>
+										</div>
+										<button class="select-image" type="button">Select Image</button>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group" id="UPI">
+										<label> UPI ID</label>
+										<input type="text" name="upi" class="form-control" value="{{upi}}">
+									</div>
+								</div>
+							</div>
+							<div>
+								<button type="submit" class="btn btn-primary">Update</button>
+								<button type="reset" class="btn btn-light">Cancel</button>
+							</div>
+						</form>
+					</div>
+					<div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
+						<h3 class="mb-4">Password Settings</h3>
+						<form class="form" action="/NGO/activity" method="POST" enctype="multipart/form-data">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Recent work</label>
+										<textarea class="form-control" name="activity" rows="4">{{activity}}</textarea>
+									</div>
+								</div>
+							</div>
+							<div class="conta">
+								<input type="file" name="img" id="file-input" multiple>
+								<label class="leb" for="file-input">
+									<i class='bx bxs-cloud-upload icon'></i>
+									&nbsp; Choose Files To Upload(max 4 files allowed)
+								</label>
+								<div id="num-of-files">No Files Choosen</div>
+								<ul id="files-list"></ul>
+							</div>
+							<div>
+								<button type="submit" class="btn btn-primary">Update</button>
+								<button type="reset" class="btn btn-light">Cancel</button>
+							</div>
+						</form>
+					</div>
+					<div class="tab-pane fade" id="payments" role="tabpanel" aria-labelledby="payments-tab">
+						<div class="payment">
+							<h3 class="mb-4">Payment History</h3>
+							<div class="tytle">
+							</div>
+							<table>
+								<tr>
+									<th>Donor Name</th>
+									<th>Amount </th>
+									<th>Date</th>
+									<th>Transaction ID</th>
+								</tr>
+								{{#each donations}}
+      								{{>ngoDonation donation=.}}
+    							{{/each}}
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="/js/NGOprofile.js"></script>
+	<script src="/js/profile.js"></script>
+	<script src="/js/navbar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Success message</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" type="text/css" href="/css/thank.css">
+</head>
+<body>
+    <div class="popup" id="popup">
+        {{#if success}}
+        <img src="https://static.vecteezy.com/system/resources/previews/008/506/390/original/bright-green-tick-checkmark-icon-free-png.png">
+        {{else}}
+        <img src="https://cdn4.vectorstock.com/i/1000x1000/38/93/cross-mark-icon-isolated-on-white-background-vector-26543893.jpg">
+        {{/if}}
+        <h2>{{message}}</h2>
+        <p>{{details}}</p>
+        <a href="{{url}}"><button type="button" >{{button}}</button></a>
+    </div>
+</body>
+</html>

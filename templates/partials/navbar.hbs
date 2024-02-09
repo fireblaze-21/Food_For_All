@@ -1,0 +1,45 @@
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://kit.fontawesome.com/b9b9cb56d6.js" crossorigin="anonymous"></script>
+</head>
+<div class="nevbar" id="nevbar">
+    <div class="logo">
+        <a href="index.html" id="logo">
+            <h1>Food <span>For</span> All</h1>
+        </a>
+    </div>
+    <div class="menu" id="menu">
+        <ul>
+            <li><a id="home" href="/">Home</a></li>
+            <!-- <li><a href="#explore">Explore</a></li> -->
+            <li><a href="/scheme">Schemes</a></li>
+            <li><a href="/contact">Contact</a></li>
+            {{#if valid}}
+            <li class="profil" id="profiles">
+                <i class="fa-sharp fa-regular fa-user"></i>
+                <ul>
+                    <li class="sub-item">
+                        <a href="/{{user}}/profile">
+                            <span class="material-symbols-outlined">ink_pen</span>
+                            <span> My profile</span>
+                        </a>
+                    </li>
+                    <li class="sub-item">
+                        <a href="/logout">
+                            <span class="material-icons-outlined">logout</span>
+                            <span> log out</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            {{else}}
+            <li id="login"><a href="/login">Log in</a></li>
+            {{/if}}
+        </ul>
+    </div>
+    <div class="menuicon">
+        <i id="menuicon" onclick="togglemenu()" class="fas fa-chevron-circle-down"> <span>MENU</span></i>
+    </div>
+</div>

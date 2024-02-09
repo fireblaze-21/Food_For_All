@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Food For All</title>
+</head>
+
+<body>
+    {{>navbar}}
+    <div class="cover">
+
+        <div class="information">
+            <h1>-</h1>
+            <h3></h3>
+            <h2> Your small contribution</h2>
+            <h1> <span>Their Next Meal</span> </h1>
+            <h3> <span>Be a fighter against hunger</span> </h3>
+            <h1>-</h1>
+
+        </div>
+    </div>
+
+    <div class="explore" id="explore"></div>
+
+    <div class="about">
+        <div class="imgcontanner">
+            <div class="aboutimg"></div>
+        </div>
+        <div class="aboutcontent">
+            <h5>_</h5>
+            {{!-- <h1>Why Donate?</h1>
+            <p>Consider the joy that illuminates a mother's face when she holds her child's hand, knowing that it is
+                nourished and protected from the relentless grip of hunger. Imagine the relief in the heart of a father
+                who can now provide sustenance to his family, breaking the cycle of despair that has haunted them for
+                generations. It is in these transformations that the true essence of compassion is revealed—transcending
+                borders, language barriers, and cultural differences.</p>
+            <p>The impact of donating goes beyond filling empty stomachs; it is a testament to our capacity for empathy.
+                Each contribution, no matter how small, becomes an act of solidarity, bridging the divide between
+                privilege and vulnerability. It reminds us that the human experience is interwoven, and our collective
+                responsibility lies in ensuring that no one suffers needlessly. For in the act of giving, we find our
+                own humanity reflected, and the world becomes a brighter, more compassionate place.</p>
+            <a href="https://rzp.io/l/oPJb73G7Fl" target="black">DONATE</a> --}}
+            <h1>what we do </h1>
+            <p>Our mission is simple yet powerful: to connect NGOs and donors on a single platform, facilitating
+                meaningful collaborations and enabling transformative change. We understand the challenges faced by NGOs
+                in securing the necessary
+                funding to carry out their important work, while donors often struggle to find reliable and impactful
+                organizations to support.</p>
+            <p>Through our user-friendly platform, NGOs gain increased visibility and access to a diverse network of
+                potential donors who share their passion for making a positive difference. Donors, on the other hand,
+                can explore a wide range of causes, projects, and organizations,
+                easily finding the ones that align with their values and philanthropic goals.</p>
+            <br>
+            <br>
+            <h5>_</h5>
+
+        </div>
+    </div>
+
+    <!-- ----------------------------------  Service -------------------------------------- -->
+    <div class="service" id="service">
+        <h1>Some of our achievements</h1>
+
+        <div class="details">
+
+            <div class="info" data-aos="fade-up">
+
+                <div class="logo"><i class="fa-regular fa-circle-dollar-to-slot"></i></div>
+                <p id="head">Make a difference</p>
+                <p>₹ 3,000 can help a child build a life and add wings to their dreams</p>
+
+            </div>
+
+            <div class="info">
+
+                <div class="logo"><i class="fa-solid fa-circle-dollar-to-slot fa-beat-fade"></i></div>
+                <p id="head">Highest Donate</p>
+                <p>Mr {{maxDonor.firstName}} {{maxDonor.lastName}} Rs: {{maxDonor.totalAmount}}</p>
+
+            </div>
+
+            <div class="info" data-aos="fade-up">
+
+                <div class="logo"><i class="fa-solid fa-money-check-dollar fa-beat"></i></div>
+                <p id="head">Highest collection</p>
+                <p>{{maxNgo.name}} has raised Rs:{{maxNgo.fund}} till now</p>
+            </div>
+
+            <div class="info" data-aos="fade-up">
+
+                <div class="logo"><i class="fas fa-chart-line"></i></div>
+                <p id="head">Lives benefitted so far</p>
+                <p>Over 50k+ humgry stomachs have benefitted so far with thousands more to go</p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- ------------------------------  Counter  ---------------------------------- -->
+    <div class="contercontent">
+
+        <div class="counterbox one">
+            <div class="information" data-aos="fade-down">
+                <div class="number">
+                    <p style="color: rgba(255, 255, 255, 0.9);">1</p>
+                </div>
+                <div class="text">
+                    <p style="color: rgba(255, 255, 255, 0.7);">Year <br> Experienced</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="counterbox">
+            <div class="information" data-aos="fade-down">
+                <div class="number">
+                    <p class="num" data-val="{{ngoCount}}">0</p>
+                </div>
+                <div class="text">
+                    <p>NGO <br> connected</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="counterbox">
+            <div class="information" data-aos="fade-down">
+                <div class="number">
+                    <p class="num" data-val="{{donorCount}}">0</p>
+                </div>
+                <div class="text">
+                    <p>Donors <br> connected</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="counterbox">
+            <div class="information" data-aos="fade-down">
+                <div class="number">
+                    <p class="num" data-val="{{fund}}">000</p>
+                </div>
+                <div class="text">
+                    <p>Total amount <br> raised</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- <div class="topspace"></div> -->
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Your Organization. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- scripts  -->
+    <script src="/js/navbar.js"></script>
+    <script src="/js/increment.js"></script>
+
+</body>
+
+</html>

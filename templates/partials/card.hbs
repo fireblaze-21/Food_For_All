@@ -1,0 +1,22 @@
+<div class="card">
+    <img class="card__image" src="/uploads/{{card.logo}}" alt="">
+    <div class="circle-container">
+        <canvas id="circle" width="100" height="100"></canvas>
+        <span id="percentage">10%</span>
+    </div>
+    <div class="card__content">
+        <h1>{{card.name}}</h1>
+        <p class="card-text">
+            {{card.description}}
+        </p>
+        <div class="amount">
+            <ul class="cal">
+                <li>Raised:₹ <span id="get">{{card.fund}}</span></li>
+                <li>Goal:₹ <span id="set">{{card.goal}}</span></li>
+            </ul>
+        </div>
+        <div class="card__button">
+            <a href="/NGO/{{card._id}}"><button class="btn">support us</button></a>
+        </div>
+    </div>
+</div>

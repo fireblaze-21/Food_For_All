@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/paymentInfo.css">
+  <title> Payment Info </title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">Payment Details</div>
+    <div class="content">
+      <form action="/donation" method="POST">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" name="name" value="{{user.firstName}} {{user.lastName}}" required disabled>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your email" name="email" value="{{user.email}}" required disabled>
+          </div>
+          <div class="input-box">
+            <span class="details">NGO Name</span>
+            <input type="text" placeholder="Enter NGO name" name="ngoName" value="{{ngo.name}}" required disabled>
+            <input type="text" name="ngoId" value="{{ngo._id}}" required hidden>
+          </div>
+          <div class="input-box">
+            <span class="details">Transaction ID</span>
+            <input type="text" placeholder="Enter transaction id" name="tranId" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Amount</span>
+            <input type="number" placeholder="Enter the amount" name="amount" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Date</span>
+            <input type="date" name="date" required>
+          </div>
+        </div>
+        <div>
+          <button type="submit" value="submit">submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>

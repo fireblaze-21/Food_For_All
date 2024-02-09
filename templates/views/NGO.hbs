@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO page</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/NGO.css">
+</head>
+
+<body>
+  {{>navbar}}
+  <div class="content">
+    <div class="first">
+      <div class="ih">
+        <div class="logoo">
+          <img src="/uploads/{{logo}}" alt="Image" class="shadow">
+        </div>
+        <div class="nam">
+          <h1>{{name}}</h1>
+        </div>
+      </div>
+      <div class="abouts">
+        <p class="par">{{description}}</p>
+        <button class="cn"><a href="/donate/{{_id}}">Donate Now</a></button>
+      </div>
+    </div>
+    <div class="details">
+      <h2>Current condition</h2>
+      <div class="dat">
+        <ul class="cala">
+          <li>Raised : <span id="get">{{fund}}</span></li>
+          <li>Goal : <span id="set">{{goal}}</span></li>
+        </ul>
+      </div>
+      <div class="circle-conta">
+        <canvas id="circle" width="100" height="100"></canvas>
+        <span id="percentage">10%</span>
+      </div>
+    </div>
+  </div>
+  <div class="about">
+    <div class="imgcontanner">
+      <div class="aboutimg"></div>
+    </div>
+    <div class="aboutcontent">
+      <h5>_</h5>
+      <h1>Our Recent Work</h1>
+      <p>{{activity}}</p>
+      <h5>_</h5>
+    </div>
+  </div>
+  <div class="main">
+    <div class="names">
+      <h1 id="nam">{{img}}</h1>
+    </div>
+    {{!-- <div class="images">
+      <div class="arrow left-arrow">&lt;</div>
+      <div class="arrow right-arrow">&gt;</div> --}}
+      <div class="slider" id="aa"></div>
+      {{!--
+    </div> --}}
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>{{name}}</h6>
+          <p class="text-justify">Every meal you provide brings smiles to faces, eases burdens, and offers a glimmer of
+            hope to those who may be experiencing difficult times. Your contribution not only fills empty stomachs but
+            also fills hearts with gratitude and renewed optimism.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Contact</h6>
+          <ul class="footer-links">
+            <li><i class="fa-regular fa-phone"></i><span>+91 {{phone}}</span></li>
+            <li>
+              <i class="fa-thin fa-phone-volume"></i>
+              <span>
+                <a href="mailto:{{email}}">{{email}}</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <h6>Address</h6>
+          <ul class="footer-links">
+            <li>Address - <span>{{address}}</span></li>
+            <li>City - <span>{{city}}</span></li>
+            <li>State - <span>{{state}}</span></li>
+            <li>Country - <span>India</span></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
+            <a href="#">Scanfcode</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+</body>
+<script src="/js/navbar.js"></script>
+<script src="/js/NGO.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--- My CSS Link-->
+    <link rel="stylesheet" href="/css/signinstyle.css">
+</head>
+<body>
+
+    <main>
+        <section class="learn">
+           <h1>Welcome to our Organization Registration page!</h1>
+           <p>We are committed to connecting Donors  to support your important work.Our platform will provide visibility and access to a
+            diverse network of potential donors who share a passion for making a positive difference.We pledge to facilitate meaningful
+            collaborations and empower NGOs to achieve their missions</p>  
+        </section>
+        <section>
+            
+    <div class="sign-up">
+        <form action="/NGO/registration" class="signup-form" enctype="multipart/form-data" data-netlify="true" onsubmit="return validation()" method="post">
+            <div class="form-btn">
+                <input type="text" placeholder="Organization Name" id="name" name="name" required>
+                <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                <p class="msg">Organization Name cannot be empty</p>
+                {{#if (isdefined err.errors.name)}}
+                <p class="msg">err.errors.name.message</p>
+                {{/if}}
+            </div>
+
+            <!-- <div class="form-btn">
+                <input type="text" placeholder="Please enter full address"  id="address">
+       
+                <p class="msg">Address cannot be empty</p>
+            </div> -->
+
+            <div class="form-btn">
+                <input type="email" placeholder="Registered Email Address" name="email"  id="email" required>
+                <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                <p class="msg">Looks like this is not an email</p>
+                {{#if (isdefined err.errors.email)}}
+                <p class="msg">err.errors.email.message</p>
+                {{/if}}
+            </div>
+            <div class="form-btn">
+                <input type="tel" placeholder="Please enter the contact No" name="phone"  id="number" required>
+                <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                <p class="msg">Enter a valid number</p>
+                {{#if (isdefined err.errors.phone)}}
+                <p class="msg">err.errors.phone.message</p>
+                {{/if}}
+            </div>
+            <div class="form-btn">
+                <input type="text" placeholder="Registration ID" name="govId" id="regID" required>
+                <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                <p class="msg">Please enter a valid ID</p>
+                {{#if (isdefined err.errors.govId)}}
+                <p class="msg">err.errors.govId.message</p>
+                {{/if}}
+            </div>
+            <div class="form-btn">
+                <input type="text" placeholder="Address"  id="address" name="address" required>
+                <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                <p class="msg">Please enter valid address</p>
+                {{#if (isdefined err.errors.address)}}
+                <p class="msg">err.errors.address.message</p>
+                {{/if}}
+            </div>
+            <div class="fo-btn">
+               
+            <input type="text" placeholder="City"  id="city" name="city" required>
+                {{#if (isdefined err.errors.city)}}
+                <p class="msg">err.errors.city.message</p>
+                {{/if}}
+           <input type="text" placeholder="State"  id="state" name="state" required> 
+                {{#if (isdefined err.errors.state)}}
+                <p class="msg">err.errors.state.message</p>
+                {{/if}}
+           <input type="number" placeholder="Yearly Goal"  id="goal" name="goal" required> 
+                <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                <p class="msg">Please enter a valid state</p>
+                {{#if (isdefined err.errors.goal)}}
+                <p class="msg">err.errors.goal.message</p>
+                {{/if}}
+            </div>
+            <div class="form-btn">
+                <input type="password" placeholder="Strong Password more than 8 characters" id="password" name="password" required>
+                <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                <p class="msg">Password should be more than 8 charecters</p>
+                {{#if (isdefined err.errors.password)}}
+                <p class="msg">err.errors.password.message</p>
+                {{/if}}
+            </div>
+            <div class="form-btn">
+                <input type="password" placeholder="Enter Password again" id="password_again" name="cpassword" required>
+                <!-- <img class="icon" src="./Images/icon-error.svg" alt="Error"> -->
+                <p class="msg">Password doesnot match</p>
+                {{#if (isdefined err)}}
+                <p class="msg">err.message</p>
+                {{/if}}
+            </div>
+            <div class="form-btn">
+                <textarea type="text" name="description" placeholder="Tell us something about your Organisation" rows="4" cols="61" required></textarea>
+                {{#if (isdefined err.errors.description)}}
+                <p class="msg">err.errors.description.message</p>
+                {{/if}}
+            </div>
+            <div class="form-btn">
+                <div class="container">
+                    <input type="file" id="file" accept="image/*" name="logo" hidden required>
+                    <div class="img-area" data-img="">
+                        <i class='bx bxs-cloud-upload icon'></i>
+                        <h3>Upload logo</h3>
+                        <p>Image size must be less than <span>1MB</span></p>
+                        {{#if (isdefined err.errors.logo)}}
+                        <p class="msg">err.errors.logo.message</p>
+                        {{/if}}
+                    </div>
+                    <button class="select-image" type="button">Select Image</button>
+                </div>
+                </div>
+            <input id="submit-btn" type="submit" value="sign in" >
+
+            <p class="terms">By clicking the button, you are agreeing to our <span><a href="#">Terms and Services</a></span></p>
+        </form>
+    </div>
+        </section>
+    </main>
+    
+</body>
+<script src="/js/regNGO.js"></script>
+</html>
